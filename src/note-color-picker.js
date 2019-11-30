@@ -34,7 +34,7 @@ const NoteColorPicker = ({ colors, setColorForNote }) => {
   return (
     <div id="note-color-picker">
       <h2>Colors</h2>
-      {Object.entries(colors).map(([note, color]) => (
+      {Object.entries(colors).sort().map(([note, color]) => (
         <Note
           key={note}
           note={note}
