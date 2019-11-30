@@ -12,20 +12,17 @@
 
 #note-color-picker {
     width: 100px;
+    border-right: 1px solid grey;
 }
 
 #notes {
     flex: 1;
-    width: 500px;
-    min-height: 300px;
-    background: blue;
+    border-bottom: 1px solid grey;
+    padding: 1em;
 }
 
 #note-input {
     flex: 2;
-    width: 500px;
-    min-height: 600px;
-    background: green;
 }
 
 .note {
@@ -36,6 +33,11 @@
 #note-color-picker .note {
     cursor: pointer;
     user-select: none;
+}
+
+#notes .note {
+    margin-left: .5em;
+    margin-right: .5em;
 }
 
 .color-picker-frame {
