@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import NoteColorPicker from "./note-color-picker";
 import Notes from "./notes";
+import NoteInput from "./note-input";
 
 const grey = "#888888";
 const initialColors = {
@@ -14,7 +15,7 @@ const initialColors = {
   "G": grey
 };
 
-const  setColorForNote = (colors, setColors) => (note, color) =>
+const setColorForNote = (colors, setColors) => (note, color) =>
   setColors({ ...colors, [note]: color });
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       <NoteColorPicker colors={colors} setColorForNote={setColorForNote(colors, setColors)} />
       <div id="composition">
         <Notes notes={notes} colors={colors} />
-        <div id="note-input" />
+        <NoteInput notes={notes} setNotes={setNotes} />
       </div>
     </div>
   );
