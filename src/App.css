@@ -1,0 +1,58 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+}
+
+#composition {
+    display: flex;
+    flex-direction: column;
+}
+
+#note-color-picker {
+    width: 100px;
+}
+
+#notes {
+    flex: 1;
+    width: 500px;
+    min-height: 300px;
+    background: blue;
+}
+
+#note-input {
+    flex: 2;
+    width: 500px;
+    min-height: 600px;
+    background: green;
+}
+
+.note {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#note-color-picker .note {
+    cursor: pointer;
+    user-select: none;
+}
+
+.color-picker-frame {
+    border: 2px solid grey;
+    border-radius: 5px;
+    background: white;
+    padding: 1em;
+    position: absolute;
+    margin-top: -6em;
+    margin-left: 5em;
+}
+
+.clickaway-overlay {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
