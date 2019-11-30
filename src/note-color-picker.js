@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CirclePicker } from "react-color";
+import { SketchPicker } from "react-color";
 
 const Note = ({ note, color, pickerOpen, onClick, onColorChange }) => {
   return (
@@ -14,10 +14,8 @@ const Note = ({ note, color, pickerOpen, onClick, onColorChange }) => {
         <React.Fragment>
           <div className="clickaway-overlay" onClick={onClick} />
           <div className="color-picker-frame">
-            <CirclePicker
+            <SketchPicker
               color={color}
-              circleSize={36}
-              circleSpacing={24}
               width="300px"
               onChangeComplete={onColorChange}
             />
