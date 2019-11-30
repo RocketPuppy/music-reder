@@ -16,7 +16,8 @@
     width: 100px;
     border-right: 1px solid grey;
     flex: 0;
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 #notes {
