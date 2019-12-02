@@ -7,7 +7,7 @@
 
 #composition {
     display: flex;
-    width: 100%;
+    min-width: 100%;
     flex-direction: column;
     flex: 1;
 }
@@ -22,7 +22,7 @@
 
 #notes {
     flex: 1;
-    width: 100%;
+    min-width: 100%;
     border-bottom: 1px solid grey;
     padding: 1em;
     display: flex;
@@ -33,9 +33,6 @@
     padding: 1em;
     margin: 0;
     text-align: left;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .passage + .passage {
