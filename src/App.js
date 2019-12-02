@@ -42,11 +42,13 @@ function App() {
   }, [passages]);
 
   return (
-    <div className="App">
-      <NoteColorPicker colors={colors} setColorForNote={setColorForNote(colors, setColors)} />
-      <div id="composition">
-        <Notes passages={passages} colors={colors} />
-        <NoteInput passages={passages} setPassages={setPassages} />
+    <>
+      <div className="App">
+        <NoteColorPicker colors={colors} setColorForNote={setColorForNote(colors, setColors)} />
+        <div id="composition">
+          <Notes passages={passages} colors={colors} />
+          <NoteInput passages={passages} setPassages={setPassages} />
+        </div>
       </div>
       <div id="footer">
         <button onClick={() => {
@@ -55,7 +57,7 @@ function App() {
           setPassages(initialPassages);
         }}>Reset</button>
       </div>
-    </div>
+    </>
   );
 }
 

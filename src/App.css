@@ -95,3 +95,7 @@
     height: 100%;
     width: 300px;
 }
+
+#footer {
+    padding: 1em 3em;
+}
