@@ -25,11 +25,25 @@
     width: 100%;
     border-bottom: 1px solid grey;
     padding: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.passage {
+    padding: 1em;
     margin: 0;
     text-align: left;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+.passage + .passage {
+    border-left: 1px solid grey;
+}
+
+.chord {
+    letter-spacing: -2em;
 }
 
 #note-input {

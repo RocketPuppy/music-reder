@@ -15,19 +15,27 @@ const initialColors = {
   "G": grey
 };
 
+// [passages][chords][notes]
+const initialPassages = [
+  [["A", "C", "G"],
+  ["E", "A"]],
+  [["D", "C"],
+  ["E", "A"]],
+];
+
 const setColorForNote = (colors, setColors) => (note, color) =>
   setColors({ ...colors, [note]: color });
 
 function App() {
   const [colors, setColors] = useState(initialColors);
-  const [notes, setNotes] = useState(["A", "B", "C"]);
+  const [passages, setPassages] = useState(initialPassages);
 
   return (
     <div className="App">
       <NoteColorPicker colors={colors} setColorForNote={setColorForNote(colors, setColors)} />
       <div id="composition">
-        <Notes notes={notes} colors={colors} />
-        <NoteInput notes={notes} setNotes={setNotes} />
+        <Notes passages={passages} colors={colors} />
+        <NoteInput passages={passages} setPassages={setPassages} />
       </div>
     </div>
   );
